@@ -17,6 +17,10 @@ public class Superhero {
         this.strength = strength;
     }
 
+    public Superhero() {
+
+    }
+
 
     public String getName() {
         return name;
@@ -40,6 +44,13 @@ public class Superhero {
 
     public int getStrength() {
         return strength;
+    }
+
+
+    public String toString() {
+        return "Superhero [Name: " + name + ", Real name: " + realName +
+                ", Superpower: " + superPower + ", Year created: " + yearCreated +
+                ", Is Human: " + isHuman + ", Strength: " + strength + "]";
     }
 
 
