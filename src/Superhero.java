@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class Superhero {
 
     private String name;
@@ -6,6 +7,8 @@ public class Superhero {
     private int yearCreated;
     private String isHuman;
     private int strength;
+    private ArrayList<Superhero> heroList;
+
 
 
     public Superhero(String name, String realName, String superPower, int yearCreated, String isHuman, int strength) {
@@ -15,10 +18,14 @@ public class Superhero {
         this.yearCreated = yearCreated;
         this.isHuman = isHuman;
         this.strength = strength;
+        this.heroList = new ArrayList<>(); // Find ud af om dette skal bruges med Arraylist i Databasen.
     }
 
-    public Superhero() {
 
+
+    // Find ud af om nedenstående skal bruges sammen med Databasen, Arraylist.
+    public ArrayList<Superhero> getSuperhero() {
+        return heroList;
     }
 
 
@@ -47,11 +54,17 @@ public class Superhero {
     }
 
 
+
     public String toString() {
-        return "Superhero [Name: " + name + ", Real name: " + realName +
-                ", Superpower: " + superPower + ", Year created: " + yearCreated +
-                ", Is Human: " + isHuman + ", Strength: " + strength + "]";
+        return "\n" + "Name: " + name + "\n " +
+                "Real name: " + realName + "\n " +
+                "Superpower: " + superPower + "\n " +
+                "Year created: " + yearCreated + "\n " +
+                "Is Human: " + isHuman + "\n " +
+                "Strength: " + strength;
     }
+
+
 
 
 
